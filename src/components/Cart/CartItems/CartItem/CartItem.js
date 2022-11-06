@@ -46,7 +46,7 @@ const CartItem = memo(({ id, image, title, price, qty }) => {
           variant="h6"
           title={totalPrice}
         >
-          {totalPrice} €
+          {totalPrice} ₹
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>

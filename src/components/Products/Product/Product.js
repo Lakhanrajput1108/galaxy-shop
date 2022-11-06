@@ -55,7 +55,11 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
                 aria-label="Toggle product description"
                 title="Click to toggle description"
               >
-                <Typography variant="h6" component="h2">
+                <Typography
+                  className={classes.typography}
+                  variant="h6"
+                  component="h2"
+                >
                   {title}
                 </Typography>
               </AccordionSummary>
@@ -94,7 +98,7 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
               className={classes.price}
               title={price.toFixed(2)}
             >
-              €{price.toFixed(2)}
+              ₹{price.toFixed(2)}
             </Typography>
           </Grid>
         </Grid>
@@ -102,7 +106,7 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton
-          aria-label="Add to Cart"
+          aria-label="Add to Cart "
           onClick={() =>
             dispatch(
               allActions.cartActions.addToCart(
@@ -117,7 +121,12 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
             )
           }
         >
-          <Typography variant="button" display="block" color="textPrimary">
+          <Typography
+            className={classes.title}
+            variant="button"
+            display="block"
+            color="textPrimary"
+          >
             Add to cart
           </Typography>
           <AddShoppingCart />

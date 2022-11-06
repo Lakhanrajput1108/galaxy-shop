@@ -95,8 +95,9 @@ const Products = () => {
   const queryMatch = (product) =>
     product.title.toLowerCase().includes(query.toLowerCase());
 
-  const arrayQueryLength = filteredProducts.filter((item) => queryMatch(item))
-    .length;
+  const arrayQueryLength = filteredProducts.filter((item) =>
+    queryMatch(item)
+  ).length;
 
   // max min
   const minPrice = Math.min(...products.map(getPrice));
@@ -108,7 +109,7 @@ const Products = () => {
   }, []);
 
   return (
-    <Container maxWidth="lg" className={classes.container}>
+    <Container maxWidth="xl" className={classes.container}>
       {loading ? (
         <Spinner />
       ) : (
